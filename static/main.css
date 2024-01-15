@@ -1,0 +1,86 @@
+body {
+    /*background-image: linear-gradient(33deg, #1af7c4 0%, #7a74e6 25%, #871dd3 50%, #f93f90 75%, #ffcbe0 100%);*/
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    font-size: 21px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 110px;
+    position: absolute;
+    stroke: #fff;
+    top: 10px;
+    left: 5%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 80px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 11px;
+    color: #fff;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.auntific {
+    margin-left: 100px;
+    text-align: right!important;
+}
+
+button {
+    background: none;
+}
+
+.primary-button {
+    color: #fff;
+}
+
+.secondary-button {
+    color: #fff;
+}
+
+.secondary-button:hover{
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    border-color: gainsboro;
+}
+
+h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}  
+
+.menu:hover{
+    color: darkgray;
+}

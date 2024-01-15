@@ -11,7 +11,7 @@ header {
     font-size: 21px;
     padding: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,6 +24,7 @@ header {
 }
 
 nav ul {
+    padding-left: 200px;
     list-style: none;
     display: flex;
 }
@@ -48,8 +49,8 @@ button {
 }
 
 .auntific {
-    margin-left: 100px;
-    text-align: right!important;
+    text-align: right;
+    padding-right: 50px;
 }
 
 button {

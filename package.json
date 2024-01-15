@@ -1,0 +1,12 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "script.js",
+  "scripts": {
+    "test": "console.log('Script loaded!');",
+    "start": "node server.js"
+  },
+  "author": "art",
+  "license": "ISC"
+}

@@ -1,6 +1,6 @@
 body {
     /*background-image: linear-gradient(33deg, #1af7c4 0%, #7a74e6 25%, #871dd3 50%, #f93f90 75%, #ffcbe0 100%);*/
-    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    background: linear-gradient(to bottom, #2e2e2e, #000000);
     background-size: 100% 100%;
     background-attachment: fixed;
     color: #fff;
@@ -24,7 +24,7 @@ header {
 }
 
 nav ul {
-    padding-left: 200px;
+    padding-left: 250px;
     list-style: none;
     display: flex;
 }
@@ -50,7 +50,7 @@ button {
 
 .auntific {
     text-align: right;
-    padding-right: 50px;
+    padding-right: 25px;
 }
 
 button {
@@ -58,11 +58,12 @@ button {
 }
 
 .primary-button {
-    color: #fff;
+    color: #ffffff;
+    margin-right: 5px;
 }
 
 .secondary-button {
-    color: #fff;
+    color: #ffffff;
 }
 
 .secondary-button:hover{

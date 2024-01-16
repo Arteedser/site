@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+     {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form method="post" action="/SignUp">
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email" autocomplete="on" required autofocus>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password"  required >
+        </p>
+        <p>
+        <input type="submit">
+        </p>
+    </form>
+<form></form>
+</body>
+</html>

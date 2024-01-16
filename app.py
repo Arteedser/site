@@ -31,7 +31,7 @@ def SignUp():
             return render_template('signup.html', message=message)
         else:
                 hash = generate_password_hash(password)
-                data = (str(email), str(hash))
+                data = (str(email), str(hash[7:]))
                 cursor.execute("INSERT INTO users (email, hash) VALUES (?,?)", data)
                 connect.commit()
                 return redirect(url_for("home"))

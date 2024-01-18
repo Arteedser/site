@@ -113,3 +113,11 @@ h1 {
     padding-bottom: 3px;
     border-bottom: 2px solid white;
 }
+
+.dataarea {
+    vertical-align: center;
+    text-align: center;
+    padding-top: 200px;
+    border: solid;
+    border-color: #fff;
+}

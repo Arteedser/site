@@ -11,7 +11,15 @@ app.config['SECRET_KEY'] = 'Rauf_Russian_People'
 connect = sql.connect('users.db', check_same_thread=False)
 cursor = connect.cursor()
 
+cursor.execute("""CREATE TABLE IF NOT EXISTS users
+(
+id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+email TEXT NOT NULL UNIQUE,
+hash TEXT NOT NULL 
+)
+""")
 
+connect.commit()
 @app.get("/")
 def home():
     return render_template("home.html")

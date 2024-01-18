@@ -2,50 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
     <title>Sign up</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='С-removebg-preview.svg') }}"/></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a class="menu" href="{{ url_for('home') }}">Home</a></li>
-                    <li><a class="menu" href="#">Projects</a></li>
-                    <li><a class="menu" href="#">About</a></li>
-                    <li><a class="menu" href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="auntific">
-                <button type="button" class="primary-button">Login</button>
-                <a href="{{ url_for('SignUp') }}">
-                    <button type="button" class="secondary-button">Sign-up</button>
-                </a>
-            </div>
-        </header>
-    </div>
     <!--Data Area-->
     <h1>Sign Up</h1>
     <div class="dataarea">
-        {% if message %}
-        <p>{{ message }}</p>
-        {% endif %}
-        <form method="post" action="/SignUp">
-            <p>
-                <label for="email">Email</label>
-                <input type="email" name="email" autocomplete="on" required autofocus>
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password"  required >
-            </p>
-            <p>
-                <input type="submit">
-            </p>
-        </form>
+        <div class="block">
+            {% if message %}
+            <p>{{ message }}</p>
+            {% endif %}
+            <form method="post" action="/SignUp">
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" autocomplete="on" required autofocus>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" name="password"  required >
+                </p>
+                <p>
+                    <input type="submit" value="Sign Up">
+                </p>
+            </form>
+        </div>
     </div>
 </body>
 </html>

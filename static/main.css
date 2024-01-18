@@ -114,8 +114,9 @@ h1 {
     border-bottom: 2px solid white;
 }
 
-.dataarea {
-    vertical-align: center;
+div.dataarea {
+    position: absolute;
+    margin-top: center;
     text-align: center;
     padding-top: 200px;
     border: solid;

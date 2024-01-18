@@ -11,6 +11,21 @@ app.config['SECRET_KEY'] = 'Rauf_Russian_People'
 connect = sql.connect('users.db', check_same_thread=False)
 cursor = connect.cursor()
 
+import sqlite3 as sql
+
+connect = sql.connect('users.db', check_same_thread=False)
+cursor = connect.cursor()
+
+cursor.execute("""CREATE TABLE IF NOT EXISTS users
+(
+id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+email TEXT NOT NULL UNIQUE,
+hash TEXT NOT NULL 
+)
+""")
+
+connect.commit()
+
 
 @app.get("/")
 def home():
@@ -19,7 +34,7 @@ def home():
 
 @app.route("/SignUp", methods=["GET", "POST"])
 def SignUp():
-    message  = ""
+    message = ""
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
@@ -30,11 +45,11 @@ def SignUp():
             message = 'User is already registered'
             return render_template('signup.html', message=message)
         else:
-                hash = generate_password_hash(password)
-                data = (str(email), str(hash))
-                cursor.execute("INSERT INTO users (email, hash) VALUES (?,?)", data)
-                connect.commit()
-                return redirect(url_for("home"))
+            hash = generate_password_hash(password)
+            data = (str(email), str(hash[7:]))
+            cursor.execute("INSERT INTO users (email, hash) VALUES (?,?)", data)
+            connect.commit()
+            return redirect(url_for("home"))
     return render_template("signup.html")
 
 

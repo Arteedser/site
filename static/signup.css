@@ -39,20 +39,22 @@ body {
     width: 150px;
     margin-top: 3px;
     display: inline-block;
-    padding: 64px;
+    padding: 4px;
 }
 
 .dataarea input {
     height: 20px;
     width: 220px;
-    padding: 5px 8px;
-    margin-left: 6px;
+    /*padding: 5px 8px;*/
+    margin-left: 15px;
 }
 
 .dataarea input[type=submit] {
     height: 30px;
+    width: 200px;
     background: #fff;
     cursor: pointer;
     -webkit-border-radius: 5px;
-    border-radius: 5px; 
+    border-radius: 5px;
+    margin-left: 25px;
 }

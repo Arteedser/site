@@ -4,16 +4,12 @@ import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-try:
-    sql = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        passwd="121377Rr.",
-        database='users'
-    )
-    print("Connected to MySQL")
-except mysql.connector.Error:
-    print("Error while connecting to MySQL")
+sql = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="121377Rr.",
+    database='users'
+)
 app.config['SECRET_KEY'] = 'Rauf_Russian_People'
 
 cursor = sql.cursor()

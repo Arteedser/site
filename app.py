@@ -39,7 +39,7 @@ def SignUp():
         else:
             hash = generate_password_hash(password)
             data = (str(email), str(hash))
-            cursor.execute("INSERT INTO users (email, hash) VALUES (%s, %s)", data)
+            cursor.execute("INSERT INTO users (email, hash_psswd) VALUES (%s, %s)", data)
             sql.commit()
             return redirect(url_for("home"))
     return render_template("signup.html")

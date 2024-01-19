@@ -1,3 +1,5 @@
+create database users;
+
 create table users
 (
     id int auto_increment primary key,

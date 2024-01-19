@@ -35,11 +35,16 @@ body {
     border-radius: 7%;
 }
 
+h2 {
+    text-align: center;
+}
+
 .dataarea label {
+    display: block;
     width: 150px;
-    margin-top: 3px;
-    display: inline-block;
     padding: 4px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .dataarea input {
@@ -51,10 +56,9 @@ body {
 
 .dataarea input[type=submit] {
     height: 30px;
-    width: 200px;
+    width: 80px;
     background: #fff;
     cursor: pointer;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin-left: 25px;
+    margin-left: 150px;
 }

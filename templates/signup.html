@@ -7,27 +7,27 @@
 </head>
 <body>
     <!--Data Area-->
-    <h1>Sign Up</h1>
     <div class="dataarea">
         <div class="block">
             {% if message %}
             <p>{{ message }}</p>
             {% endif %}
+            <h2>Sign Up</h2>
             <form method="post" action="/SignUp">
                 <p>
                     <label for="email">Email</label>
                     <input type="email" name="email" autocomplete="on" required autofocus .>
                 </p>
-                <p>
+                <div>
                     <label for="password">Password</label>
                     <input type="password" name="password"  required >
-                </p>
-                <p>
+                </div>
+                <div>
                     <input type="submit" value="Sign Up">
-                </p>
-                <a href="{{ url_for('home') }}">
-                    <button type="button">Back</button>
-                </a>
+                    <a href="{{ url_for('home') }}">
+                        <button type="button">Back</button>
+                    </a>
+                </div>
             </form>
         </div>
     </div>

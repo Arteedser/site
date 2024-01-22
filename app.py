@@ -3,11 +3,14 @@ from flask import Flask, render_template, request, url_for, redirect
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
+with open('psswdroot', 'r') as f:
+    root_psswd = f.read()
+
 app = Flask(__name__)
 sql = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="121377Rr.",
+    passwd=f"{root_psswd}",
     database='users'
 )
 app.config['SECRET_KEY'] = 'Rauf_Russian_People'
@@ -31,6 +34,9 @@ def SignUp():
         existing_user = cursor.fetchone()
         if existing_user:
             message = 'User is already registered'
+            return render_template('signup.html', message=message)
+        elif 6 > len(password) > 16 or password.isdigit() or password.isalpha():
+            message = 'The password must be 8 to 16 characters long and contain letters and numbers'
             return render_template('signup.html', message=message)
         else:
             hash = generate_password_hash(password)

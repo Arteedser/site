@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, url_for, redirect
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 
-with open('psswdroot', 'r') as f:
+with open('psswdroot.txt', 'r') as f:
     root_psswd = f.read()
 
 app = Flask(__name__)
@@ -29,7 +29,6 @@ def SignUp():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        print(email, password)
         cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
         existing_user = cursor.fetchone()
         if existing_user:

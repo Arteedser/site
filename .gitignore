@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 .gitignore
 psswdroot.txt
+=======
+psswdroot.txt
+test.py
+>>>>>>> 3a22c9322e6048f107d3861be30cbe448b43dbc0

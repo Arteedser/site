@@ -57,7 +57,7 @@ h2 {
     margin-left: 15px;*/
 }
 
-.dataarea input[type=submit] {
+.controles {
     display: block;
     height: 4vh;
     width: 30%;
@@ -65,4 +65,14 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     margin-left: 150px;
+}
+
+.dataarea input[type=submit] {
+    /*display: block;
+    height: 4vh;
+    width: 30%;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 150px;*/
 }

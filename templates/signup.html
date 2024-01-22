@@ -14,17 +14,17 @@
             {% endif %}
             <h2>Sign Up</h2>
             <form method="post" action="/SignUp">
-                <p>
+                <div class="user_input">
                     <label for="email">Email</label>
                     <input type="email" name="email" autocapitalize="off" autocomplete="on" required autofocus .>
-                </p>
-                <div>
+                </div>
+                <div class="user_input">
                     <label for="password">Password</label>
                     <input type="password" name="password" autocapitalize="off" required >
                 </div>
                 <div class="controles">
-                    <input type="submit" value="Sign Up">
-                    <a href="{{ url_for('home') }}">
+                    <input class="user_control" type="submit" value="Sign Up">
+                    <a class="user_control" href="{{ url_for('home') }}">
                         <button type="button">Back</button>
                     </a>
                 </div>

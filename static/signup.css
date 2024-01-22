@@ -48,7 +48,7 @@ h2 {
     text-align: center;
 }
 
-.dataarea input {
+.dataarea .user_input input {
     display: block;
     height: 3vh;
     width: 80%;
@@ -58,21 +58,25 @@ h2 {
 }
 
 .controles {
-    display: block;
+    margin: 10px 0 0 0;
+    display: flex;
     height: 4vh;
-    width: 30%;
-    background: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 150px;
+    width: 100%;
+    justify-content: space-around;
+    
 }
 
-.dataarea input[type=submit] {
-    /*display: block;
-    height: 4vh;
-    width: 30%;
-    background: #fff;
-    cursor: pointer;
+.controles .user_control {
+    /*background: #fff;
+    */cursor: pointer;
     border-radius: 5px;
-    margin-left: 150px;*/
+    margin: 0 auto;
+}
+
+.controles input[type=submit] {
+    margin-left: auto;
+}
+
+.controles button[type=submit] {
+    margin-right: auto;
 }

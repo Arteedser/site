@@ -29,6 +29,8 @@ def SignUp():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
+        surname = request.form["surname"]
+        password2 = request.form["password2"]
         cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
         existing_user = cursor.fetchone()
         if existing_user:
@@ -39,8 +41,8 @@ def SignUp():
             return render_template('signup.html', message=message)
         else:
             hash = generate_password_hash(password)
-            data = (str(email), str(hash))
-            cursor.execute("INSERT INTO users (email, hash_psswd) VALUES (%s, %s)", data)
+            data = (str(email), str(hash), surname)
+            cursor.execute("INSERT INTO users (email, hash_psswd, surname) VALUES (%s, %s, %s)", data)
             sql.commit()
             return redirect(url_for("home"))
     return render_template("signup.html")

@@ -39,6 +39,9 @@ def SignUp():
         elif 6 > len(password) > 16 or password.isdigit() or password.isalpha():
             message = 'The password must be 8 to 16 characters long and contain letters and numbers'
             return render_template('signup.html', message=message)
+        elif password != password2:
+            message = "Passwords don't match"
+            return render_template('signup.html', message=message)
         else:
             hash = generate_password_hash(password)
             data = (str(email), str(hash), surname)

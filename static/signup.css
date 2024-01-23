@@ -28,6 +28,7 @@ body {
     position: absolute;
     display: flex;
     border-style: solid;
+    align-items: stretch;
     width: 400px;
     height: 500px;
     top: 50%;
@@ -45,8 +46,8 @@ h2 {
     display: block;
     width: 150px;
     padding: 4px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto;/*
+    text-align: center;*/
 }
 
 .dataarea .user_input input {
